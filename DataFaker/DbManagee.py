@@ -49,3 +49,20 @@ class DbManagee():
       def clearEnv(self):
             self.excuteSqlList(self.tearDown_statements)
 
+if __name__ == "__main__":
+    # example workflow as follows
+    statement_setup = [
+        "select 8 from table_name",
+        "select item from table_name"
+    ]
+    statement_cleardown = [
+        "select 8 from table_name",
+        "select item from table_name"
+    ]
+    my_db = DbManagee(MySql.MySQL('DATABASE'))
+    for sql in statement_setup:
+        my_db.add_setUp_statement(sql)
+    for sql in statement_cleardown:
+        my_db.add_tearDown_statement(sql)
+    # my_db.setUpEnv()
+    # my_db.clearEnv()
