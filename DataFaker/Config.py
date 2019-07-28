@@ -1,8 +1,8 @@
 # coding=utf-8
 '''
-Created on 2017年12月26日
+Created on 2019 年07月21日
 
-@author: gWX403582
+@author: Allen Guo
 '''
 import configparser
 import os
